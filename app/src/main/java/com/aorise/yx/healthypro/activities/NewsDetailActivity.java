@@ -42,6 +42,8 @@ public class NewsDetailActivity extends MyActivity implements CompoundButton.OnC
             case "sociafocus":
             case "latestnews":
             case "foodnews":
+            case "illnessnews":
+            case "drugnews":
                 ImageView imageView = (ImageView) findViewById(R.id.sf_detail_image);
                 TextView title = (TextView) findViewById(R.id.sf_detail_title);
                 TextView content = (TextView) findViewById(R.id.sf_detail_content);
@@ -55,6 +57,10 @@ public class NewsDetailActivity extends MyActivity implements CompoundButton.OnC
                     json = Utils.getJson("latestnews.json", this);
                 } else if (type.equals("foodnews")) {
                     json = Utils.getJson("foodnews.json", this);
+                } else if (type.equals("illnessnews")) {
+                    json = Utils.getJson("illnessnews.json", this);
+                } else {
+                    json = Utils.getJson("drugnews.json", this);
                 }
                 Gson gson = new Gson();
                 SocialNews socialNews = gson.fromJson(json, SocialNews.class);
