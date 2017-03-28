@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_news_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aorise.yx.healthypro.activities.NewsDetailActivity">
+
+    <TextView
+        android:id="@+id/sf_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="上班族警惕4种常见职业病屏幕脸长时间面对电脑"
+        android:textColor="@color/detail_title_color"
+        android:textSize="@dimen/detail_title_textsize"/>
+    <ImageView
+        android:src="@mipmap/me_info_bgimage"
+        android:id="@+id/sf_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/sf_detail_content"
+        android:textSize="@dimen/detail_content_textsize"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_marginBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/sf_zan"
+            android:button="@null"
+            android:background="@drawable/zan_select"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/sf_zan_count1"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentBottom="true"
+            android:text="1"
+            android:layout_toRightOf="@+id/sf_zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

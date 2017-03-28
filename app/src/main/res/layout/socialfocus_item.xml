@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="3dp"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/socialfocus_image"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/colorkeywords"
+                android:id="@+id/social_keywords"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="right"
+                android:textSize="@dimen/keywords_textsize"/>
+
+            <TextView
+                android:textColor="@color/colorcontent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/social_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="@dimen/title_textsize"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
