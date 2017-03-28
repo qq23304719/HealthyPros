@@ -19,7 +19,7 @@ import com.google.gson.Gson;
 
 import java.util.List;
 
-public class NewsDetailActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class NewsDetailActivity extends MyActivity implements CompoundButton.OnCheckedChangeListener {
 
     private int mCount=0;
     private TextView mZan_count;
@@ -28,8 +28,8 @@ public class NewsDetailActivity extends AppCompatActivity implements CompoundBut
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setColor(this, Color.parseColor("#23f53b"));
         setContentView(R.layout.activity_news_detail);
+        setColor(this, Color.parseColor("#35D085"));
         int index = getIntent().getIntExtra("index", 0);
         String type = getIntent().getStringExtra("type");
         initViews(type, index);
@@ -40,13 +40,19 @@ public class NewsDetailActivity extends AppCompatActivity implements CompoundBut
         switch (type) {
             //社会焦点详情界面
             case "sociafocus":
+            case "latestnews":
                 ImageView imageView = (ImageView) findViewById(R.id.sf_detail_image);
                 TextView title = (TextView) findViewById(R.id.sf_detail_title);
                 TextView content = (TextView) findViewById(R.id.sf_detail_content);
                 CheckBox zan = (CheckBox) findViewById(R.id.sf_zan);
                 mZan_count = (TextView) findViewById(R.id.sf_zan_count1);
                 zan.setOnCheckedChangeListener(this);
-                String json = Utils.getJson("socialfocus.json", this);
+                String json=null;
+                if (type.equals("sociafocus")){
+                    json = Utils.getJson("socialfocus.json", this);
+                }else if (type.equals("latestnews")){
+                    json = Utils.getJson("latestnews.json", this);
+                }
                 Gson gson = new Gson();
                 SocialNews socialNews = gson.fromJson(json, SocialNews.class);
                 List<SocialNews.TngouBean> social_news = socialNews.getTngou();

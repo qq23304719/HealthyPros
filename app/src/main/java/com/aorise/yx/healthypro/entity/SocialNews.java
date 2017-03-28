@@ -6,7 +6,7 @@ import java.util.List;
  * Created by Yx on 10:16 2017/3/17 03.
  */
 
-public class SocialNews {
+public class SocialNews{
 
     /**
      * status : true

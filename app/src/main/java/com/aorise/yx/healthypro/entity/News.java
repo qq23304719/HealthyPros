@@ -3,10 +3,10 @@ package com.aorise.yx.healthypro.entity;
 import java.util.List;
 
 /**
- * Created by Yx on 10:03 2017/3/17 03.
+ * Created by Yx on 14:57 2017/3/28 03.
  */
 
-public class LatestNews{
+public class News {
 
     /**
      * status : true

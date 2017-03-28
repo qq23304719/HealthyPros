@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aorise.yx.healthypro.R;
+import com.aorise.yx.healthypro.entity.News;
 import com.aorise.yx.healthypro.entity.SocialNews;
 import com.bumptech.glide.Glide;
 
@@ -20,10 +21,10 @@ import java.util.List;
  */
 
 public class SocialFousAdapter extends BaseAdapter {
-    private List<SocialNews.TngouBean> mList;
+    private List<News.TngouBean> mList;
     private Context mContext;
 
-    public SocialFousAdapter(List<SocialNews.TngouBean> list, Context context) {
+    public SocialFousAdapter(List<News.TngouBean> list, Context context) {
         mList = list;
         mContext = context;
     }
@@ -83,8 +84,8 @@ public class SocialFousAdapter extends BaseAdapter {
             mKeyword=(TextView) view.findViewById(R.id.social_keywords);
         }
 
-        public void bindview(List<SocialNews.TngouBean> list,int position) {
-            SocialNews.TngouBean bean = list.get(position);
+        public void bindview(List<News.TngouBean> list,int position) {
+            News.TngouBean bean = list.get(position);
             mTitle.setText(bean.getTitle());
             mKeyword.setText(bean.getKeywords());
             String url="http://tnfs.tngou.net/img"+bean.getImg();

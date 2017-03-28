@@ -27,7 +27,7 @@ public class MainActivity extends MyActivity implements RadioGroup.OnCheckedChan
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setColor(this, Color.parseColor("#23f53b"));
+        setColor(this, Color.parseColor("#35D085"));
         mNewsFragment = new NewsFragment();
         mVideoFragment = new VideoFragment();
         mPersonalFragment = new PersonalFragment();

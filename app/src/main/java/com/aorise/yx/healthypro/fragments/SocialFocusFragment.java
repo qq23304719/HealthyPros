@@ -1,8 +1,5 @@
 package com.aorise.yx.healthypro.fragments;
 
-
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,19 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.aorise.yx.healthypro.R;
 import com.aorise.yx.healthypro.activities.NewsDetailActivity;
 import com.aorise.yx.healthypro.adapters.SocialFousAdapter;
 import com.aorise.yx.healthypro.baseutils.Utils;
+import com.aorise.yx.healthypro.entity.News;
 import com.aorise.yx.healthypro.entity.SocialNews;
 import com.google.gson.Gson;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 
 /**
@@ -46,8 +39,8 @@ public class SocialFocusFragment extends BaseFragment implements AdapterView.OnI
         ListView listView = (ListView) ret.findViewById(R.id.socialnews_listview);
         String socialfoucs_json = Utils.getJson("socialfocus.json",getActivity());
         Gson gson = new Gson();
-        SocialNews socialNews = gson.fromJson(socialfoucs_json, SocialNews.class);
-        List<SocialNews.TngouBean> social_news = socialNews.getTngou();
+        News socialNews = gson.fromJson(socialfoucs_json, News.class);
+        List<News.TngouBean> social_news = socialNews.getTngou();
         SocialFousAdapter adapter = new SocialFousAdapter(social_news, getContext());
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
