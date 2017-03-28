@@ -7,4 +7,5 @@
     <color name="colorkeywords">#bbbbbb</color>
     <color name="detail_title_color">#000000</color>
     <color name="toolbar">#35D085</color>
+    <color name="tabIndicatorColor">#fe9754</color>
 </resources>

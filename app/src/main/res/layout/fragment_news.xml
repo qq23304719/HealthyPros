@@ -8,6 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.design.widget.TabLayout
+        app:tabIndicatorColor="@color/tabIndicatorColor"
         android:background="@color/toolbar"
         android:id="@+id/news_tablayout"
         android:layout_width="match_parent"

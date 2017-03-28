@@ -21,7 +21,7 @@ import java.util.List;
 
 public class NewsDetailActivity extends MyActivity implements CompoundButton.OnCheckedChangeListener {
 
-    private int mCount=0;
+    private int mCount = 0;
     private TextView mZan_count;
 
 
@@ -41,17 +41,20 @@ public class NewsDetailActivity extends MyActivity implements CompoundButton.OnC
             //社会焦点详情界面
             case "sociafocus":
             case "latestnews":
+            case "foodnews":
                 ImageView imageView = (ImageView) findViewById(R.id.sf_detail_image);
                 TextView title = (TextView) findViewById(R.id.sf_detail_title);
                 TextView content = (TextView) findViewById(R.id.sf_detail_content);
                 CheckBox zan = (CheckBox) findViewById(R.id.sf_zan);
                 mZan_count = (TextView) findViewById(R.id.sf_zan_count1);
                 zan.setOnCheckedChangeListener(this);
-                String json=null;
-                if (type.equals("sociafocus")){
+                String json = null;
+                if (type.equals("sociafocus")) {
                     json = Utils.getJson("socialfocus.json", this);
-                }else if (type.equals("latestnews")){
+                } else if (type.equals("latestnews")) {
                     json = Utils.getJson("latestnews.json", this);
+                } else if (type.equals("foodnews")) {
+                    json = Utils.getJson("foodnews.json", this);
                 }
                 Gson gson = new Gson();
                 SocialNews socialNews = gson.fromJson(json, SocialNews.class);
@@ -73,15 +76,15 @@ public class NewsDetailActivity extends MyActivity implements CompoundButton.OnC
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        Log.d("TAG", "onCheckedChanged:st "+mCount);
+        Log.d("TAG", "onCheckedChanged:st " + mCount);
         if (b) {
-            mCount = mCount+1;
+            mCount = mCount + 1;
             Toast.makeText(this, "点赞成功！", Toast.LENGTH_SHORT).show();
         } else {
-            mCount = mCount-1;
+            mCount = mCount - 1;
             Toast.makeText(this, "取消点赞！", Toast.LENGTH_SHORT).show();
         }
-        Log.d("TAG", "onCheckedChanged:end "+mCount);
+        Log.d("TAG", "onCheckedChanged:end " + mCount);
         mZan_count.setText(String.valueOf(mCount));
     }
 }
