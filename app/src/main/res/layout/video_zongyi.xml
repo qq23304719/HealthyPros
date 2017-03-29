@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:background="#e0e0e0"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/video_zongyi_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        />
+
+    <FrameLayout
+        android:id="@+id/video_zongyi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SurfaceView
+            android:id="@+id/video_zongyi_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+
+        <ImageView
+            android:id="@+id/video_zongyi_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/video_zongyi_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/play"
+            />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/video_zongyi_image_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/comment"/>
+
+        <TextView
+            android:id="@+id/video_zongyi_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/video_zongyi_image_comment"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/video_zongyi_image_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/video_zongyi_play_count"
+            android:paddingTop="10dp"
+            android:src="@mipmap/play"/>
+
+        <TextView
+            android:id="@+id/video_zongyi_play_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/video_zongyi_share"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/video_zongyi_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp"
+            android:paddingTop="10dp"/>
+    </RelativeLayout>
+</LinearLayout>

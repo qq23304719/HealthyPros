@@ -8,11 +8,13 @@
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.design.widget.TabLayout
-        app:tabIndicatorColor="@color/tabIndicatorColor"
-        android:background="@color/toolbar"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
         android:id="@+id/news_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        app:tabMode="scrollable"
+        app:tabIndicatorColor="@color/tabIndicatorColor"
         app:tabSelectedTextColor="#ffffff"
         />
 
