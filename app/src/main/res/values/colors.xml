@@ -8,4 +8,23 @@
     <color name="detail_title_color">#000000</color>
     <color name="toolbar">#35D085</color>
     <color name="tabIndicatorColor">#fe9754</color>
+    //
+    <color name="colorMeTextTitle">#ffffff</color>
+    <color name="colorMeBgTitle">#35d085</color>
+
+    //自定义
+    <color name="colorBack">#ffffff</color>
+    <color name="colorBackt">#f5f5f5</color>
+    <color name="colorLine">#E1E1E1</color>
+    <color name="colorHint">#919191</color>
+    <color name="colorMs">#50d2c2</color>
+    <color name="colorclass">#605E5E5E</color>
+    <color name="color">#605E5E5E</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorblackG">#000000</color>
+    <color name="colortalkget">#353535</color>
+    <color name="material_red">#ffF44336</color>
+    <color name="material_green">#ff4CAF50</color>
+    <color name="material_blue">#ff03A9F4</color>
+    <color name="material_yellow">#ffFFEB3B</color>
 </resources>

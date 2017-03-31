@@ -34,7 +34,6 @@
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             />
-
         <ImageView
             android:id="@+id/video_amusement_play"
             android:layout_width="wrap_content"
@@ -43,12 +42,10 @@
             android:src="@drawable/play"
             />
     </FrameLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-
         <ImageView
             android:id="@+id/video_amusement_image_comment"
             android:layout_width="wrap_content"
